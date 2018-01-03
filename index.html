@@ -1,9 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>JS Dragon Slayer</title>
+	<script type="text/javascript" src="js/lead.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
+
 <body>
+	<div id="choose-class-cont">
+		<h1>Choose a class:</h1>
+		<p id="class-1" onclick="classOneSelect()">Class one.</p>
+		<p>Class two.</p>
+		<p>Class three.</p>
+	</div>
+
+	<!-- Class one: Weapon -->
+	<div id="class-one-weapons-cont" style="display: none;">
+		<h1>Choose class one weapon:</h1>
+		<p onclick="c1WeaponOneChoose()">Weapon one.</p>
+		<p onclick="c1WeaponTwoChoose()">Weapon two.</p>
+		<p onclick="c1WeaponThreeChoose()">Weapon three.</p>
+	</div>
+	
+	<!-- Class two: Weapon -->
+	<div style="display: none;">
+		<h1>Choose class two weapon:</h1>
+		<p>Weapon one.</p>
+		<p>Weapon two.</p>
+		<p>Weapon three.</p>
+	</div>	
+
+	<!-- Class three: Weapon -->
+	<div style="display: none;">
+		<h1>Choose class three weapon:</h1>
+		<p>Weapon one.</p>
+		<p>Weapon two.</p>
+		<p>Weapon three.</p>
+	</div>
 
 </body>
 </html>

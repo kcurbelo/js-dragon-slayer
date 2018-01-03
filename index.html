@@ -2,16 +2,21 @@
 <html>
 <head>
 	<title>JS Dragon Slayer</title>
+	<script
+	  src="https://code.jquery.com/jquery-3.2.1.min.js"
+	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	  crossorigin="anonymous"></script>
 	<script type="text/javascript" src="js/lead.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 
 <body>
+	<h1>Dragon Slayer</h1>
 	<div id="choose-class-cont">
 		<h1>Choose a class:</h1>
-		<p id="class-1" onclick="classOneSelect()">Class one.</p>
-		<p>Class two.</p>
-		<p>Class three.</p>
+		<p class="cur" id="class-1" onclick="classOneSelect()" >Class one.</p>
+		<p class="cur" id="class-2" onclick="classTwoSelect()" >Class two.</p>
+		<p class="cur" id="class-3" onclick="classThreeSelect()" >Class three.</p>
 	</div>
 
 	<!-- Class one: Weapon -->
@@ -23,20 +28,24 @@
 	</div>
 	
 	<!-- Class two: Weapon -->
-	<div style="display: none;">
+	<div id="class-two-weapons-cont" style="display: none;">
 		<h1>Choose class two weapon:</h1>
-		<p>Weapon one.</p>
-		<p>Weapon two.</p>
-		<p>Weapon three.</p>
+		<p onclick="c2WeaponOneChoose()">Weapon one.</p>
+		<p onclick="c2WeaponTwoChoose()">Weapon two.</p>
+		<p onclick="c2WeaponThreeChoose()">Weapon three.</p>
 	</div>	
 
 	<!-- Class three: Weapon -->
-	<div style="display: none;">
+	<div id="class-three-weapons-cont" style="display: none;">
 		<h1>Choose class three weapon:</h1>
-		<p>Weapon one.</p>
-		<p>Weapon two.</p>
-		<p>Weapon three.</p>
+		<p onclick="c3WeaponOneChoose()">Weapon one.</p>
+		<p onclick="c3WeaponTwoChoose()">Weapon two.</p>
+		<p onclick="c3WeaponThreeChoose()">Weapon three.</p>
 	</div>
+
+	<img id="class-one-img" src="img/base-1.gif">
+	<img id="class-two-img"  src="img/base-2.gif" style="display: none;">
+	<img id="class-three-img"  src="img/base-3.gif" style="display: none;width: 50px;">
 
 </body>
 </html>

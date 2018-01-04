@@ -1,53 +1,97 @@
 window.onload = function() {
-
-
+// Class selection hovers ============================================================
+// Adds hover state over first image
 $( "#class-1" ).hover(
   function() {
     $( "#class-one-img" ).addClass("char-select-bor");
-    // console.log('asds');
   }, 
   function() {
     $( "#class-one-img" ).removeClass("char-select-bor");
-    // console.log('asds');
   }
 );
-
+// Adds hover state over second image
 $( "#class-2" ).hover(
   function() {
     $( "#class-two-img" ).addClass("char-select-bor");
-    // console.log('asds');
   }, 
   function() {
     $( "#class-two-img" ).removeClass("char-select-bor");
-    // console.log('asds');
   }
 );
-
+// Adds hover state over third image
 $( "#class-3" ).hover(
   function() {
     $( "#class-three-img" ).addClass("char-select-bor");
-    // console.log('asds');
   }, 
   function() {
     $( "#class-three-img" ).removeClass("char-select-bor");
-    // console.log('asds');
+  }
+);
+
+// Class 1 - weapon selection hovers ============================================================
+// Adds hover state over first image
+$( "#c1-w-1-link" ).hover(
+  function() {
+    $( "#c1-w-1-img" ).addClass("char-select-bor");
+  }, 
+  function() {
+    $( "#c1-w-1-img" ).removeClass("char-select-bor");
+  }
+);
+// Adds hover state over second image
+$( "#c1-w-2-link" ).hover(
+  function() {
+    $( "#c1-w-2-img" ).addClass("char-select-bor");
+  }, 
+  function() {
+    $( "#c1-w-2-img" ).removeClass("char-select-bor");
+  }
+);
+// Adds hover state over third image
+$( "#c1-w-3-link" ).hover(
+  function() {
+    $( "#c1-w-3-img" ).addClass("char-select-bor");
+  }, 
+  function() {
+    $( "#c1-w-3-img" ).removeClass("char-select-bor");
   }
 );
 
 
+
+
+
+
+
+// Selects class one and replaces title with that class name
 $( "#class-1" ).click(function() {
 	console.log('ss');
-	$( "#class-two-img" ).addClass("hide-it");
-	$( "#class-three-img" ).addClass("hide-it");
+	$( "#char-classes-cont" ).hide("slow");
 	$( "#class-1-weapons-cont" ).delay(600).show("slow");
 	let classChoice = $( "#class-1" ).html();
-	// console.log(d);
 	$( "#choose-class-title" ).animate({'opacity': 0}, 400, function(){
         $(this).html("You are now a " + classChoice).animate({'opacity': 1}, 400);    
     });
-	$( ".classes-cont" ).hide("slow");
+	$( ".classes-links-cont" ).hide("slow");
 
-})
+});
+
+$( "#c1-w-1-link" ).click(function() {
+  console.log('YES!');
+  $( "#c1-w-1-img" ).addClass("show-it");
+  $( "#c1-w-2-img" ).addClass("hide-it");
+  $( "#c1-w-3-img" ).addClass("hide-it");
+  $("#c1-w-1-link").unbind('mouseenter').unbind('mouseleave');
+  $( "#c1-w-1-img" ).removeClass("char-select-bor");
+  $( "#c-1-w-text-cont" ).delay(600).hide(1200);
+  $( "#choose-class-title" ).delay(600).hide(1200);
+  $( "#p-2-fight" ).delay(600).show(1200);
+  $( "#c1-w-1-img" ).delay(600).show(1200);
+  $( "#c1-w-1-img" ).addClass("char-position");
+  $( "#c1-w-1-img" ).animate({bottom: 0}, 'slow');
+  
+});
+
 
 
 	// Class 1 weapons ========================================

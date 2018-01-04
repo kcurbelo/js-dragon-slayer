@@ -7,8 +7,14 @@
 .hide-it{
 	display: none;
 }
+.disable-hover {
+
+}
 .char-select {
 	width: 50px;
+}
+.char-position {
+	position: absolute;
 }
 .char-select-bor {
 	border:5px solid red;

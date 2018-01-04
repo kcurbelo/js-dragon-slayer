@@ -11,43 +11,46 @@
 </head>
 
 <body>
-	<h1>Dragon Slayer</h1>
+	<h1 id="titlezzz">Dragon Slayer</h1>
+	<div id="p-2-fight" style="display: none;">
+		<h1>Time to fight the dragon!</h1>
+		<h3>Select and attack</h3>
+	</div>
+
+
 	<div id="choose-class-cont">
 		<h1 id="choose-class-title">Choose a class:</h1>
-		<div class="classes-cont" style=" margin: 0;">
+		<div class="classes-links-cont" style=" margin: 0;">
 			<p class="cur" id="class-1">Class one.</p>
 			<p class="cur" id="class-2">Class two.</p>
 			<p class="cur" id="class-3">Class three.</p>
 		</div>
 	</div>
+	<!-- Character select images -->
+	<div id="char-classes-cont">
+		<img id="class-one-img" src="img/base-1.gif" class="char-select">
+		<img id="class-two-img"  src="img/base-2.gif" class="char-select" >
+		<img id="class-three-img"  src="img/base-3.gif" class="char-select" >
+	</div>
 
 	<!-- Class one: Weapon -->
 	<div id="class-1-weapons-cont" style="display: none; margin: 0;">
-		<h1 style=" margin: 0;">Choose class one weapon:</h1>
-		<p onclick="c1WeaponOneChoose()">Weapon one.</p>
-		<p onclick="c1WeaponTwoChoose()">Weapon two.</p>
-		<p onclick="c1WeaponThreeChoose()">Weapon three.</p>
+		<div id="c-1-w-text-cont">
+			<h1 style=" margin: 0;">Choose class one weapon:</h1>
+			<p id="c1-w-1-link" class="cur">Weapon one.</p>
+			<p id="c1-w-2-link" class="cur">Weapon two.</p>
+			<p id="c1-w-3-link" class="cur">Weapon three.</p>
+		</div>
+		<div style="position: relative;">
+			<img id="c1-w-1-img" src="img/w-1.gif" class="char-select">
+			<img id="c1-w-2-img"  src="img/w-2.gif" class="char-select">
+			<img id="c1-w-3-img"  src="img/w-3.gif" class="char-select">	
+		</div>		
 	</div>
+
+
 	
-	<!-- Class two: Weapon -->
-<!-- 	<div id="class-two-weapons-cont" style="display: none;">
-		<h1>Choose class two weapon:</h1>
-		<p onclick="c2WeaponOneChoose()">Weapon one.</p>
-		<p onclick="c2WeaponTwoChoose()">Weapon two.</p>
-		<p onclick="c2WeaponThreeChoose()">Weapon three.</p>
-	</div> -->	
 
-	<!-- Class three: Weapon -->
-<!-- 	<div id="class-three-weapons-cont" style="display: none;">
-		<h1>Choose class three weapon:</h1>
-		<p onclick="c3WeaponOneChoose()">Weapon one.</p>
-		<p onclick="c3WeaponTwoChoose()">Weapon two.</p>
-		<p onclick="c3WeaponThreeChoose()">Weapon three.</p>
-	</div> -->
-
-	<img id="class-one-img" src="img/base-1.gif" class="char-select">
-	<img id="class-two-img"  src="img/base-2.gif" class="char-select" >
-	<img id="class-three-img"  src="img/base-3.gif" class="char-select" >
 
 </body>
 </html>

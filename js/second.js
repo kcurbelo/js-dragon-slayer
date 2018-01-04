@@ -25,7 +25,7 @@ $(document).ready(function() {
 
   // Class 1 - Weapon 1 ============================================================
   $( "#c-1-w-1" ).click(function() {
-    console.log('Class 3 link clicked');
+    console.log('c-1-w-1 was clicked');
     // Fades out c-1-w cont
     $( "#c-1-w-cont" ).fadeOut("slow");
     // Fades out c-2-w cont
@@ -56,64 +56,101 @@ $(document).ready(function() {
 
 
 
-  //Character variables
-
-  // Dreagon variables
-
   // Misc variables
-
   let randomNumber = Math.random() >= 0.5; 
-  let health = 100;
-  let damage = 10;
+  
+  // Dragon variables ==========
+  let health = 500;
   let dodge = randomNumber;
+  let dragonAtkLight = 5;
+  let dragonAtkMedium = 10;
+  let dragonAtkHeavy = 15;
+  let dragonAtkTitle = "Light";
 
+  // User variables ============
   let charHealth = 100;
-  let dragonDamage = 20;
-
+  let charAtkTitle = "Light";
+  let charAtk = 0
+  // Weapon variables ==========
   // Class 1 weapon 1
-  let C1W1 = $(".delete_link").attr("data-value");
 
 
-  // $(".delete_link").click(function(){
-    // weapon1 = $(".delete_link").attr("data-value");
-    // alert(weapon1);
-  // });
+  // Calculates based on what attack user chooses
+  $( ".light-atk" ).click(function() {
+    // console.log('1');
+    charAtk = 10;
+    charAtkTitle = "Light";
+    userAttack();
 
-  $( "#u-atk" ).click(function() {
-    // When a dodge is unsuccessful do this:
-    if (dodge === false) {
-      // Random boolean generator
-      randomNumber = Math.random() >= 0.5; 
-      // Sets dodge equal to that boolean
-      dodge = randomNumber;
-      // Applys damage to health because the silly dragon forgot to dodge
-      health = health - C1W1;
-      // Console logs health 
-      console.log(health)
-    }
-    // When a dodge is successful do this:
-    else {
-      console.log('Dragon dodged and countered hahahaha')
-      // Random boolean generator
-      randomNumber = Math.random() >= 0.5; 
-      // Resets the boolean so that if it is clicked again it will be something else. 
-      dodge = randomNumber;
-      // Applys damage to health because the silly dragon forgot to dodge
-      charHealth = charHealth - dragonDamage; 
-      console.log('charHealth is now ' + charHealth)     
-    }    
-    // When health is 0 do this:
-    if (health <= 0 ) {
-      console.log('Dead');
-      health = 0;
-      $( "#u-atk" ).hide();
-    }
-    if (charHealth <= 0 ) {
-      console.log('charDead');
-      health = 0;
-      $( "#u-atk" ).hide();
-    }        
   });
+  $( ".medium-atk" ).click(function() {
+    // console.log('2');
+    charAtk = 20;
+    charAtkTitle = "Medium";
+    userAttack();
+
+  });
+  $( ".heavy-atk" ).click(function() {
+    // console.log('3');
+    charAtk = 30;
+    charAtkTitle = "Heavy";
+    userAttack();
+  }); 
+
+  // Calculates dragon dam
+
+  // $( "#u-atk" ).click(function() {
+    function userAttack() {    
+      // When a dodge is unsuccessful do this:
+      if (dodge === false) {
+        // Random boolean generator
+        randomNumber = Math.random() >= 0.8; 
+        // Sets dodge equal to that boolean
+        dodge = randomNumber;
+        // Applys damage to health because the silly dragon forgot to dodge
+        health = health - charAtk;
+          $("#resp-text").html( charAtkTitle + " attack successful!" );
+          $("#resp-sub-text").html("Dragon health is now " + health );        
+        // Console logs health 
+        console.log(health)
+      }
+      // When a dodge is successful do this:
+      else { 
+        // Random boolean generator
+        randomNumber = Math.random() >= 0.8; 
+        // Resets the boolean so that if it is clicked again it will be something else. 
+        dodge = randomNumber;
+        // Applys damage to health because the silly dragon forgot to dodge
+          if (charAtk === 10){
+            charHealth = charHealth - dragonAtkLight;
+            dragonAtkTitle = "light";
+          }
+          if (charAtk === 20){
+            charHealth = charHealth - dragonAtkMedium;
+            dragonAtkTitle = "medium";
+          }
+          if (charAtk === 30){
+            charHealth = charHealth - dragonAtkHeavy;
+            dragonAtkTitle = "heavy";
+          }
+          $("#resp-text").html("Dragon dodged and countered with a " + dragonAtkTitle + " attack" );
+          $("#resp-sub-text").html("Your health is now " + charHealth );
+        // charHealth = charHealth - dragonDamage; 
+        console.log('charHealth is now ' + charHealth)     
+      }    
+      // When health is 0 do this:
+      if (health <= 0 ) {
+        console.log('Dead');
+        health = 0;
+        $( ".light-atk" ).hide();
+      }
+      if (charHealth <= 0 ) {
+        console.log('charDead');
+        health = 0;
+        $( ".light-atk" ).hide();
+      } 
+    }       
+  // });
 
 
 

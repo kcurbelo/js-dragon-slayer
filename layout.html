@@ -14,76 +14,89 @@
 
 <div style=";height: 700px;">
 	<div style="background-color: olive;">
-		<h1 style="margin: 0;">Title</h1>
+		<h1>Title</h1>
 	</div>
-	<div style="background: url('https://images.pexels.com/photos/593158/pexels-photo-593158.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb') no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;height: 400px;">
-		<div style="width: 35%;margin: 0 auto;">
+	<div id="top-cont">
+		<div id="screen-cont">
 			<div style="background-color: #f2f2f2;height:400px;">
-				<h2 id="resp-text"></h2>
-				<h3 id="resp-sub-text"></h3>
+				<!-- Health cont -->
+				<div style="background-color: teal;">
+					<ul>
+						<li id="char-hp">100/100</li><!--
+					 --><li id="dragon-hp">500/500</li>
+					</ul>
+				</div>
+				<p id="resp-text">sdsdsddsdds</p>
+				<p id="resp-sub-text"></p>
 			</div>
 		</div>
 	</div>	
 	<!-- Bottom Area -->
 	<div style="background-color: transparent;height:200px;">
 		<!-- Bottom Dialog Box -->
-		<div style="background-color: #aaa;height:200px;width: 35%; margin: 0 auto;">
-			<!-- Test js  -->
-			<!--  -->
+		<div id="btm-dialog-cont" >
 
-
-
-			<!-- Choice 1 - choose class -->
+			<!-- Choice 1 - choose class =================================== -->
 			<div id="choice-1-cont">
-				<h1 style="text-align: center;margin: 0;">Choose a class:</h1>
-				<ul style="text-align: center;">
-					<li id="c-1-link"><a>Class 1</a></li>
-					<li id="c-2-link"><a>Class 2</a></li>
-					<li id="c-3-link"><a>Class 3</a></li>
+				<h1>Choose a class:</h1>
+				<ul>
+					<li><a id="c-1-link">Class 1</a></li>
+					<li><a id="c-2-link">Class 2</a></li>
+					<li><a id="c-3-link">Class 3</a></li>
 				</ul>
 			</div>
 
-			<!-- Choice 2 -->
-			<!-- Choose a c-1 weapon  -->
+			<!-- Choice 2 =================================== -->
+			<!-- Choose a c-1 weapon ============= -->
 			<div id="c-1-w-cont" style="display: none;">
-				<h1 style="text-align: center;margin: 0;">Choose a c-1 weapon:</h1>
-				<ul style="text-align: center;">
-					<li id="c-1-w-1"><a>Weapon 1</a></li>
-					<li><a>Weapon 2</a></li>
-					<li><a>Weapon 3</a></li>
+				<h1>Choose a c-1 weapon:</h1>
+				<ul>
+					<li><a id="c-1-w-1">Weapon 1</a></li>
+					<li><a id="c-1-w-2">Weapon 2</a></li>
+					<li><a id="c-1-w-3">Weapon 3</a></li>
 				</ul>
 			</div>
-			<!--  choose a c-2 weapon  -->
+			<!--  choose a c-2 weapon ============= -->
 			<div id="c-2-w-cont" style="display: none;">
-				<h1 style="text-align: center;margin: 0;">Choose a c-2 weapon:</h1>
-				<ul style="text-align: center;">
-					<li><a>Weapon 1</a></li>
-					<li><a>Weapon 2</a></li>
-					<li><a>Weapon 3</a></li>
+				<h1>Choose a c-2 weapon:</h1>
+				<ul>
+					<li><a id="c-2-w-1">Weapon 1</a></li>
+					<li><a id="c-2-w-2">Weapon 2</a></li>
+					<li><a id="c-2-w-3">Weapon 3</a></li>
 				</ul>
 			</div>	
-			<!--  choose a c-3 weapon  -->
+			<!--  choose a c-3 weapon ============= -->
 			<div id="c-3-w-cont" style="display: none;">
-				<h1 style="text-align: center;margin: 0;">Choose a c-3 weapon:</h1>
-				<ul style="text-align: center;">
-					<li><a>Weapon 1</a></li>
-					<li><a>Weapon 2</a></li>
-					<li><a>Weapon 3</a></li>
+				<h1>Choose a c-3 weapon:</h1>
+				<ul>
+					<li><a id="c-3-w-1">Weapon 1</a></li>
+					<li><a id="c-3-w-2">Weapon 2</a></li>
+					<li><a id="c-3-w-3">Weapon 3</a></li>
 				</ul>
 			</div>						
 
-			<!-- Countdown timer  -->
+			<!-- Countdown timer ===================================  -->
 			<div id="battle-countdown-cont" style="display: none;">
-				<h1 style="text-align: center;margin: 0;">Battling in: <br><span id="countdown-text"></span></h1>
+				<h1>Battling in: <br><span id="countdown-text"></span></h1>
 			</div>
 
-			<!-- Choice 3 - choose an action  -->
+			<!-- Choice 3 - choose an action ===================================  -->
 			<div id="select-action-cont" style="display: none;">
-				<h1 style="text-align: center;margin: 0;">What do you want to do?</h1>
-				<ul style="margin: 0;">
-					<li class="light-atk">Light attack</li>
-					<li class="medium-atk">Medium attack</li>
-					<li class="heavy-atk">Heavy attack</li>
+				<h1>What do you want to do?</h1>
+				<ul>
+					<li><a class="light-atk">Light attack</a></li>
+					<li><a class="medium-atk">Medium attack</a></li>
+					<li><a class="heavy-atk">Heavy attack</a></li>
+				</ul>	
+				</ul>
+			</div>	
+
+			<!-- When it is done ===================================  -->
+			<div id="done-cont" style="display: none;">
+				<h1 id="winner-title">Play again? </h1>
+				<ul>
+					<li><a>Yes</a></li>
+					<li><a>no</a></li>
 				</ul>	
 				</ul>
 			</div>	

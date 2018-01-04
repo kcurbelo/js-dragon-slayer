@@ -27,8 +27,16 @@
 	<div style="background-color: transparent;height:200px;">
 		<!-- Bottom Dialog Box -->
 		<div style="background-color: #aaa;height:200px;width: 35%; margin: 0 auto;">
+			<!-- Test js  -->
+			<a data-value="10" class="delete_link">Click to delete this row</a>
+			<a id="u-atk">Asdsdsdd</a>
+			<a id="u-atk-2">2222222</a>
+			<a id="u-atk-3">333333</a>
+			<h3 id="t-s" style="margin:0;"></h3>
+
+
 			<!-- Choice 1 - choose class -->
-			<div id="choice-1-cont">
+			<div id="choice-1-cont" style="display: none;">
 				<h1 style="text-align: center;margin: 0;">Choose a class:</h1>
 				<ul style="text-align: center;">
 					<li id="c-1-link"><a>Class 1</a></li>
@@ -66,15 +74,13 @@
 				</ul>
 			</div>						
 
-
-
-
 			<!-- Countdown timer  -->
 			<div id="battle-countdown-cont" style="display: none;">
-				<h1 style="text-align: center;margin: 0;">Battling in: <br><span id="demo"></span></h1>
+				<h1 style="text-align: center;margin: 0;">Battling in: <br><span id="countdown-text"></span></h1>
 			</div>
+
 			<!-- Choice 3 - choose an action  -->
-			<div style="display: none;">
+			<div id="select-action-cont" style="display: none;">
 				<h1 style="text-align: center;margin: 0;">What do you want to do?</h1>
 				<p style="text-align: center;margin: 0;">(repeat until dragon is dead)</p>
 				<ul style="text-align: center;">

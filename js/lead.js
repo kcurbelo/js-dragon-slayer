@@ -86,10 +86,11 @@ $( "#c1-w-1-link" ).click(function() {
   $( "#c-1-w-text-cont" ).delay(600).hide(1200);
   $( "#choose-class-title" ).delay(600).hide(1200);
   $( "#p-2-fight" ).delay(600).show(1200);
-  $( "#c1-w-1-img" ).delay(600).show(1200);
-  $( "#c1-w-1-img" ).addClass("char-position");
-  $( "#c1-w-1-img" ).animate({bottom: 0}, 'slow');
-  
+  // $( "#c1-w-1-img" ).delay(600).show(1200);
+  $("#t-i").attr("src", "img/base-3.gif");
+  // $( "#c1-w-1-img" ).addClass("char-position");
+  // $( "#c1-w-1-img" ).animate({top: 200}, 'slow');
+  // Replace image rather than have it animate
 });
 
 

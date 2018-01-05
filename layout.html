@@ -7,6 +7,7 @@
 	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 	  crossorigin="anonymous"></script>
 	<script type="text/javascript" src="js/second.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">	
 	<link rel="stylesheet" type="text/css" href="css/main.css">	
 </head>
@@ -66,8 +67,8 @@
 
 			<!-- Choice 1 - choose class =================================== -->
 			<div id="choice-1-cont">
-				<h1>Choose a class:</h1>
-				<ul>
+				<h1 class="cont-title">Choose a class:</h1>
+				<ul class="list-cont">
 					<li><a id="c-1-link">Assassin</a></li>
 					<li><a id="c-2-link">Soldier</a></li>
 					<li><a id="c-3-link">Mage</a></li>
@@ -77,8 +78,8 @@
 			<!-- Choice 2 =================================== -->
 			<!-- Choose a c-1 weapon ============= -->
 			<div id="c-1-w-cont" style="display: none;">
-				<h1>Choose a c-1 weapon:</h1>
-				<ul>
+				<h1 class="cont-title">Choose a c-1 weapon:</h1>
+				<ul class="list-cont">
 					<li><a id="c-1-w-1">Wooden Spike</a></li>
 					<li><a id="c-1-w-2">Dagger</a></li>
 					<li><a id="c-1-w-3">Short Sword</a></li>
@@ -86,8 +87,8 @@
 			</div>
 			<!--  choose a c-2 weapon ============= -->
 			<div id="c-2-w-cont" style="display: none;">
-				<h1>Choose a c-2 weapon:</h1>
-				<ul>
+				<h1 class="cont-title">Choose a c-2 weapon:</h1>
+				<ul class="list-cont">
 					<li><a id="c-2-w-1">Short Sword</a></li>
 					<li><a id="c-2-w-2">Long Sword</a></li>
 					<li><a id="c-2-w-3">Spear</a></li>
@@ -95,8 +96,8 @@
 			</div>	
 			<!--  choose a c-3 weapon ============= -->
 			<div id="c-3-w-cont" style="display: none;">
-				<h1>Choose a c-3 weapon:</h1>
-				<ul>
+				<h1 class="cont-title">Choose a c-3 weapon:</h1>
+				<ul class="list-cont">
 					<li><a id="c-3-w-1">Staff of 'meh'</a></li>
 					<li><a id="c-3-w-2">Staff of Earth</a></li>
 					<li><a id="c-3-w-3">Staff of Strength</a></li>
@@ -105,26 +106,26 @@
 
 			<!-- Countdown timer ===================================  -->
 			<div id="battle-countdown-cont" style="display: none;">
-				<h1>Battling in: <br><span id="countdown-text"></span></h1>
+				<h1 class="cont-title">Battling in: <br><span id="countdown-text"></span></h1>
 			</div>
 
 			<!-- Choice 3 - choose an action ===================================  -->
 			<div id="select-action-cont" style="display: none;">
-				<h1>Choose your attack:</h1>
+				<h1 class="cont-title">Choose your attack:</h1>
 				<!-- class 1 attacks -->
-				<ul id="c-1-atks-cont" style="display: none;">
+				<ul id="c-1-atks-cont"  class="list-cont" style="display: none;">
 					<li><a class="light-atk">c-1 Swift Strike</a></li>
 					<li><a class="medium-atk">c-1 Shadow Attack</a></li>
 					<li><a class="heavy-atk">c-1 Assassin Fury</a></li>
 				</ul>
 				<!-- class 2 attacks -->	
-				<ul id="c-2-atks-cont" style="display: none;">
+				<ul id="c-2-atks-cont"  class="list-cont" style="display: none;">
 					<li><a class="light-atk">c-2 Prod Strike</a></li>
 					<li><a class="medium-atk">c-2 Blade Slice</a></li>
 					<li><a class="heavy-atk">c-2 Double Handed Lunge</a></li>
 				</ul>	
 				<!-- class 3 attacks -->
-				<ul id="c-3-atks-cont" style="display: none;">
+				<ul id="c-3-atks-cont"  class="list-cont" style="display: none;">
 					<li><a class="light-atk">c-3 Dust Blow</a></li>
 					<li><a class="medium-atk">c-3 Thunder Strike</a></li>
 					<li><a class="heavy-atk">c-3 Magical Wrath</a></li>
@@ -133,8 +134,8 @@
 
 			<!-- When it is done ===================================  -->
 			<div id="done-cont" style="display: none;">
-				<h1 id="winner-title">Play again? </h1>
-				<ul>
+				<h1 id="winner-title" class="cont-title">Play again? </h1>
+				<ul class="list-cont">
 					<li><a>Yes</a></li>
 					<li><a>no</a></li>
 				</ul>	

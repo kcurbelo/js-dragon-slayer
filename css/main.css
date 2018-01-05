@@ -1,6 +1,13 @@
+h1, h2, h3, h4, p, li, a {
+	font-family: 'Press Start 2P', cursive;
+/*    -webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);	*/
+}
+
 h1 {
 	text-align: center;
 	margin: 0;
+	font-size: 22px;
 }
 
 ul {
@@ -14,8 +21,19 @@ li a {
 	cursor: pointer;
 }
 
+.list-cont {
+	text-align: center;
+}
+.list-cont li{
+	margin-bottom: 15px;
+}
+.cont-title {
+	padding: 20px 0;
+}
+
 #top-cont{
-	background: url('https://images.pexels.com/photos/593158/pexels-photo-593158.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb') no-repeat center center fixed;
+	/*background: url('../img/test-bg-2.jpg') ;*/
+	background-color: #aaa;
 	 -webkit-background-size: cover; 
 	 -moz-background-size: cover; 
 	 -o-background-size: cover; 
@@ -53,11 +71,13 @@ li a {
 
 
 .char-select-bor {
-	border:5px dashed rgba(0, 0, 0, 0.3);
+	border:2px dashed rgba(0, 0, 0, 0.3);
 	/*width: 100px;*/
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;	
+/*    outline: 2px dashed rgba(0, 0, 0, 0.3);
+    outline-offset:-2px; */   
 /*        -webkit-transition: all 0.1s ease;
     -moz-transition: all 0.1s ease;
     -o-transition: all 0.1s ease;
@@ -66,17 +86,37 @@ li a {
 
 
 /*Blink Animation*/
-@keyframes blink {
-  50% {
-    opacity: 0.0;
-  }
+.blink_me {
+    -webkit-animation-name: blinker;
+    -webkit-animation-duration: .5s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+
+    -moz-animation-name: blinker;
+    -moz-animation-duration: .5s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: 1;
+
+    animation-name: blinker;
+    animation-duration: .5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
 }
-@-webkit-keyframes blink {
-  50% {
-    opacity: 0.0;
-  }
+
+@-moz-keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
 }
-.blink {
-  animation: blink 1s step-start 0s infinite;
-  -webkit-animation: blink 1s step-start 0s infinite;
+
+@-webkit-keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+@keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
 }

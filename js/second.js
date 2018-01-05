@@ -351,7 +351,7 @@ $(document).ready(function() {
   // ============================================================
   function startCountdown() {   
     let count=6;
-    let counter=setInterval(timer, 1200); //1000 will  run it every 1 second
+    let counter=setInterval(timer, 200); //1000 will  run it every 1 second
     function timer(){
       count=count-1;
       if (count <= 0)
@@ -421,7 +421,7 @@ $(document).ready(function() {
       dodge = randomNumber;
       // Applys damage to health because the silly dragon forgot to dodge
       health = health - charAtk;
-      $("#resp-text").html( charAtkTitle + " attack successful!" );
+      $("#resp-text").html( "Attack successful!" ).fadeOut(250).fadeIn(250);
       $("#dragon-hp").html( health + "/500");        
       // Console logs health 
       console.log(health)
@@ -445,7 +445,7 @@ $(document).ready(function() {
           charHealth = charHealth - dragonAtkHeavy;
           dragonAtkTitle = "heavy";
         }
-        $("#resp-text").html("Dragon dodged and countered with a " + dragonAtkTitle + " attack" );
+        $("#resp-text").html("Dragon dodged and countered with a " + dragonAtkTitle + " attack!" ).fadeOut(250).fadeIn(250);
         $("#char-hp").html( charHealth + "/100");
       // charHealth = charHealth - dragonDamage; 
       console.log('charHealth is now ' + charHealth)     

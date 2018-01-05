@@ -396,6 +396,7 @@ $(document).ready(function() {
     charAtk = 10;
     charAtkTitle = "Light";
     userAttack();
+    $( this ).fadeOut(250).fadeIn(250);
 
   });
   $( ".medium-atk" ).click(function() {
@@ -403,6 +404,7 @@ $(document).ready(function() {
     charAtk = 20;
     charAtkTitle = "Medium";
     userAttack();
+    $( this ).fadeOut(250).fadeIn(250);
 
   });
   $( ".heavy-atk" ).click(function() {
@@ -410,6 +412,7 @@ $(document).ready(function() {
     charAtk = 30;
     charAtkTitle = "Heavy";
     userAttack();
+    $( this ).fadeOut(250).fadeIn(250);
   }); 
 
   function userAttack() {    
@@ -425,6 +428,9 @@ $(document).ready(function() {
       $("#dragon-hp").html( health + "/500");        
       // Console logs health 
       console.log(health)
+      // Adds attack animation
+      $("#atk-img").show("slide");
+      $("#atk-img").hide("slide");
     }
     // When a dodge is successful do this:
     else { 

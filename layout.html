@@ -6,6 +6,10 @@
 	  src="https://code.jquery.com/jquery-3.2.1.min.js"
 	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 	  crossorigin="anonymous"></script>
+	<script
+	  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+	  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+	  crossorigin="anonymous"></script>	  
 	<script type="text/javascript" src="js/second.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">	
@@ -33,30 +37,37 @@
 			</div>
 			<!-- Images containers -->
 			<div style="height:100px;background-color: tan;">
-				<div id="classes-img-cont">
-					<img id="c-1-img" src="img/base-1.gif">
-					<img id="c-2-img" src="img/base-2.gif">
-					<img id="c-3-img" src="img/base-3.gif">
-				</div>
-				<!-- c-1 weapons -->
-				<div id="c-1-weapons-cont" style="display: none;">					
-					<img id="c-1-w-1-img" src="img/w-1.gif">
-					<img id="c-1-w-2-img" src="img/w-2.gif">
-					<img id="c-1-w-3-img" src="img/w-3.gif">
-				</div>
-				<!-- c-2 weapons -->
-				<div id="c-2-weapons-cont" style="display: none;">					
-					<img id="c-2-w-1-img" src="img/w-1.gif">
-					<img id="c-2-w-2-img" src="img/w-2.gif">
-					<img id="c-2-w-3-img" src="img/w-3.gif">
-				</div>
-				<!-- c-3 weapons -->
-				<div id="c-3-weapons-cont" style="display: none;">					
-					<img id="c-3-w-1-img" src="img/w-1.gif">
-					<img id="c-3-w-2-img" src="img/w-2.gif">
+				<div style="background-color: pink; display: inline-block;width:33%;">
+					<div id="classes-img-cont">
+						<img class="char-img-inv" id="c-1-img" src="img/base-1.gif">
+						<img class="char-img-inv" id="c-2-img" src="img/base-2.gif">
+						<img class="char-img-inv" id="c-3-img" src="img/base-3.gif">
+					</div>
+					<!-- c-1 weapons -->
+					<div id="c-1-weapons-cont" style="display: none;">					
+						<img class="char-img-inv" id="c-1-w-1-img" src="img/w-1.gif">
+						<img class="char-img-inv" id="c-1-w-2-img" src="img/w-2.gif">
+						<img class="char-img-inv" id="c-1-w-3-img" src="img/w-3.gif">
+					</div>
+					<!-- c-2 weapons -->
+					<div id="c-2-weapons-cont" style="display: none;">					
+						<img class="char-img-inv" id="c-2-w-1-img" src="img/w-1.gif">
+						<img class="char-img-inv" id="c-2-w-2-img" src="img/w-2.gif">
+						<img class="char-img-inv" id="c-2-w-3-img" src="img/w-3.gif">
+					</div>
+					<!-- c-3 weapons -->
+					<div id="c-3-weapons-cont" style="display: none;">					
+						<img class="char-img-inv" id="c-3-w-1-img" src="img/w-1.gif">
+						<img class="char-img-inv" id="c-3-w-2-img" src="img/w-2.gif">
+						<img class="char-img-inv" id="c-3-w-3-img" src="img/w-3.gif">
+					</div>
+				</div><!--
+			 --><div style="background-color: teal; display: inline-block;width: 44%; text-align: right;">
+					<img id="atk-img" src="img/w-3.gif" style="display: none;">
+				</div><!--	
+			 --><div style="background-color: teal; display: inline-block;width: 23%;">
 					<img id="c-3-w-3-img" src="img/w-3.gif">
-				</div>
-
+				</div>								
 			</div>
 		</div>
 	</div>	

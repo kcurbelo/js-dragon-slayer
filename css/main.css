@@ -23,7 +23,7 @@ li a {
 	 height: 400px;
 }
 #screen-cont {
-	width: 35%;
+	width: 40%;
 	margin: 0 auto;
 }
 
@@ -37,7 +37,6 @@ li a {
 	width: 50%;
 }
 
-
 #resp-text, #resp-sub-text {
 	margin: 0;
 	text-align: center;
@@ -46,6 +45,38 @@ li a {
 #btm-dialog-cont {
 	background-color: #aaa;
 	height:200px;
-	width: 35%; 
+	width: 40%; 
 	margin: 0 auto;
+}
+
+
+
+
+.char-select-bor {
+	border:5px dashed rgba(0, 0, 0, 0.3);
+	/*width: 100px;*/
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;	
+/*        -webkit-transition: all 0.1s ease;
+    -moz-transition: all 0.1s ease;
+    -o-transition: all 0.1s ease;
+    transition: all 0.1s ease;*/
+}
+
+
+/*Blink Animation*/
+@keyframes blink {
+  50% {
+    opacity: 0.0;
+  }
+}
+@-webkit-keyframes blink {
+  50% {
+    opacity: 0.0;
+  }
+}
+.blink {
+  animation: blink 1s step-start 0s infinite;
+  -webkit-animation: blink 1s step-start 0s infinite;
 }

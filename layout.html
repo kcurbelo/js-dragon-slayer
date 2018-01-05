@@ -18,7 +18,7 @@
 	</div>
 	<div id="top-cont">
 		<div id="screen-cont">
-			<div style="background-color: #f2f2f2;height:400px;">
+			<div style="background-color: #f2f2f2;height:300px;">
 				<!-- Health cont -->
 				<div style="background-color: teal;">
 					<ul>
@@ -26,8 +26,36 @@
 					 --><li id="dragon-hp">500/500</li>
 					</ul>
 				</div>
-				<p id="resp-text">sdsdsddsdds</p>
+				<p id="resp-text"></p>
 				<p id="resp-sub-text"></p>
+				
+			</div>
+			<!-- Images containers -->
+			<div style="height:100px;background-color: tan;">
+				<div id="classes-img-cont">
+					<img id="c-1-img" src="img/base-1.gif">
+					<img id="c-2-img" src="img/base-2.gif">
+					<img id="c-3-img" src="img/base-3.gif">
+				</div>
+				<!-- c-1 weapons -->
+				<div id="c-1-weapons-cont" style="display: none;">					
+					<img id="c-1-w-1-img" src="img/w-1.gif">
+					<img id="c-1-w-2-img" src="img/w-2.gif">
+					<img id="c-1-w-3-img" src="img/w-3.gif">
+				</div>
+				<!-- c-2 weapons -->
+				<div id="c-2-weapons-cont" style="display: none;">					
+					<img id="c-2-w-1-img" src="img/w-1.gif">
+					<img id="c-2-w-2-img" src="img/w-2.gif">
+					<img id="c-2-w-3-img" src="img/w-3.gif">
+				</div>
+				<!-- c-3 weapons -->
+				<div id="c-3-weapons-cont" style="display: none;">					
+					<img id="c-3-w-1-img" src="img/w-1.gif">
+					<img id="c-3-w-2-img" src="img/w-2.gif">
+					<img id="c-3-w-3-img" src="img/w-3.gif">
+				</div>
+
 			</div>
 		</div>
 	</div>	
@@ -40,9 +68,9 @@
 			<div id="choice-1-cont">
 				<h1>Choose a class:</h1>
 				<ul>
-					<li><a id="c-1-link">Class 1</a></li>
-					<li><a id="c-2-link">Class 2</a></li>
-					<li><a id="c-3-link">Class 3</a></li>
+					<li><a id="c-1-link">Assassin</a></li>
+					<li><a id="c-2-link">Soldier</a></li>
+					<li><a id="c-3-link">Mage</a></li>
 				</ul>
 			</div>
 
@@ -51,27 +79,27 @@
 			<div id="c-1-w-cont" style="display: none;">
 				<h1>Choose a c-1 weapon:</h1>
 				<ul>
-					<li><a id="c-1-w-1">Weapon 1</a></li>
-					<li><a id="c-1-w-2">Weapon 2</a></li>
-					<li><a id="c-1-w-3">Weapon 3</a></li>
+					<li><a id="c-1-w-1">Wooden Spike</a></li>
+					<li><a id="c-1-w-2">Dagger</a></li>
+					<li><a id="c-1-w-3">Short Sword</a></li>
 				</ul>
 			</div>
 			<!--  choose a c-2 weapon ============= -->
 			<div id="c-2-w-cont" style="display: none;">
 				<h1>Choose a c-2 weapon:</h1>
 				<ul>
-					<li><a id="c-2-w-1">Weapon 1</a></li>
-					<li><a id="c-2-w-2">Weapon 2</a></li>
-					<li><a id="c-2-w-3">Weapon 3</a></li>
+					<li><a id="c-2-w-1">Short Sword</a></li>
+					<li><a id="c-2-w-2">Long Sword</a></li>
+					<li><a id="c-2-w-3">Spear</a></li>
 				</ul>
 			</div>	
 			<!--  choose a c-3 weapon ============= -->
 			<div id="c-3-w-cont" style="display: none;">
 				<h1>Choose a c-3 weapon:</h1>
 				<ul>
-					<li><a id="c-3-w-1">Weapon 1</a></li>
-					<li><a id="c-3-w-2">Weapon 2</a></li>
-					<li><a id="c-3-w-3">Weapon 3</a></li>
+					<li><a id="c-3-w-1">Staff of 'meh'</a></li>
+					<li><a id="c-3-w-2">Staff of Earth</a></li>
+					<li><a id="c-3-w-3">Staff of Strength</a></li>
 				</ul>
 			</div>						
 
@@ -82,13 +110,25 @@
 
 			<!-- Choice 3 - choose an action ===================================  -->
 			<div id="select-action-cont" style="display: none;">
-				<h1>What do you want to do?</h1>
-				<ul>
-					<li><a class="light-atk">Light attack</a></li>
-					<li><a class="medium-atk">Medium attack</a></li>
-					<li><a class="heavy-atk">Heavy attack</a></li>
-				</ul>	
+				<h1>Choose your attack:</h1>
+				<!-- class 1 attacks -->
+				<ul id="c-1-atks-cont" style="display: none;">
+					<li><a class="light-atk">c-1 Swift Strike</a></li>
+					<li><a class="medium-atk">c-1 Shadow Attack</a></li>
+					<li><a class="heavy-atk">c-1 Assassin Fury</a></li>
 				</ul>
+				<!-- class 2 attacks -->	
+				<ul id="c-2-atks-cont" style="display: none;">
+					<li><a class="light-atk">c-2 Prod Strike</a></li>
+					<li><a class="medium-atk">c-2 Blade Slice</a></li>
+					<li><a class="heavy-atk">c-2 Double Handed Lunge</a></li>
+				</ul>	
+				<!-- class 3 attacks -->
+				<ul id="c-3-atks-cont" style="display: none;">
+					<li><a class="light-atk">c-3 Dust Blow</a></li>
+					<li><a class="medium-atk">c-3 Thunder Strike</a></li>
+					<li><a class="heavy-atk">c-3 Magical Wrath</a></li>
+				</ul>									
 			</div>	
 
 			<!-- When it is done ===================================  -->
@@ -98,7 +138,6 @@
 					<li><a>Yes</a></li>
 					<li><a>no</a></li>
 				</ul>	
-				</ul>
 			</div>	
 
 		</div>

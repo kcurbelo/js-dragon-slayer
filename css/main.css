@@ -33,7 +33,7 @@ li a {
 
 #top-cont{
 	/*background: url('../img/test-bg-2.jpg') ;*/
-	background-color: #aaa;
+	
 	 -webkit-background-size: cover; 
 	 -moz-background-size: cover; 
 	 -o-background-size: cover; 
@@ -43,6 +43,8 @@ li a {
 #screen-cont {
 	width: 40%;
 	margin: 0 auto;
+  border: 1px solid black;
+  border-bottom:0;
 }
 
 #char-hp {
@@ -61,10 +63,11 @@ li a {
 }
 
 #btm-dialog-cont {
-	background-color: #aaa;
+	
 	height:200px;
 	width: 40%; 
 	margin: 0 auto;
+  border: 1px solid black;
 }
 
 

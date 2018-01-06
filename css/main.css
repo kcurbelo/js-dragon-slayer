@@ -2,6 +2,7 @@ h1, h2, h3, h4, p, li, a {
 	font-family: 'Press Start 2P', cursive;
 /*    -webkit-font-smoothing: antialiased;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.004);	*/
+    color: #000;
 }
 
 h1 {
@@ -68,6 +69,9 @@ li a {
 	width: 40%; 
 	margin: 0 auto;
   border: 1px solid black;
+  background-image: url(../img/bg-test.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 

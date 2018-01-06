@@ -239,6 +239,7 @@ $(document).ready(function() {
     hideClassCont();
     showBattleCDCont(); 
     startCountdown();
+    showC1WAtks();
     hideC1W1Img();
     hideC1W2Img();
     // hideC1W3Img();  
@@ -351,7 +352,7 @@ $(document).ready(function() {
   // ============================================================
   function startCountdown() {   
     let count=6;
-    let counter=setInterval(timer, 1000); //1000 will  run it every 1 second
+    let counter=setInterval(timer, 100); //1000 will  run it every 1 second
     function timer(){
       count=count-1;
       if (count <= 0)

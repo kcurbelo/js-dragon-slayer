@@ -352,7 +352,7 @@ $(document).ready(function() {
   // ============================================================
   function startCountdown() {   
     let count=6;
-    let counter=setInterval(timer, 100); //1000 will  run it every 1 second
+    let counter=setInterval(timer, 1000); //1000 will  run it every 1 second
     function timer(){
       count=count-1;
       if (count <= 0)
@@ -372,6 +372,13 @@ $(document).ready(function() {
   }
 
 
+  $( "#play-again-yes" ).click(function() {
+    location.reload();  
+  }); 
+  $( "#play-again-yes-2" ).click(function() {
+    location.reload();  
+  }); 
+
   // ============================================================
   // Attack sequence function
   // ============================================================
@@ -379,7 +386,7 @@ $(document).ready(function() {
   let randomNumber = Math.random() >= 0.5; 
   
   // Dragon variables ==========
-  let health = 500;
+  let health = 200;
   let dodge = randomNumber;
   let dragonAtkLight = 5;
   let dragonAtkMedium = 10;
@@ -426,7 +433,7 @@ $(document).ready(function() {
       // Applys damage to health because the silly dragon forgot to dodge
       health = health - charAtk;
       $("#resp-text").html( "Attack successful!" ).fadeOut(250).fadeIn(250);
-      $("#dragon-hp").html( health + "/500");        
+      $("#dragon-hp").html( health + "/200");        
       // Console logs health 
       console.log(health)
       // Adds attack animation
@@ -464,6 +471,8 @@ $(document).ready(function() {
       $("#dragon-hp").html( 0 + "/500");
       $( "#select-action-cont" ).hide();
       $( "#done-cont" ).show("slow");
+      $("#dragon-img").attr("src", "img/dragon-dead.gif");
+      $("#resp-text").html( "YOU WIN!!!!!" );
     }
     if (charHealth <= 0 ) {
       health = 0;        
@@ -471,9 +480,12 @@ $(document).ready(function() {
       $("#char-hp").html( health + "/100");
       $( "#select-action-cont" ).hide();
       $( "#done-cont" ).show("slow");
+      $("#resp-text").html( "YOU LOSE :(" );
+      $(".char-img-inv").attr("src", "img/char-dead.gif");
     } 
   }
   //end of userAttack(); 
+
 
 
 

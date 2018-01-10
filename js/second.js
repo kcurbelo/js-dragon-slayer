@@ -89,7 +89,6 @@ $(document).ready(function() {
       $( "#c-2-w-3-img" ).removeClass("char-select-bor");
     }
   );
-
   // ============================================================
   // Hover css for weapon selection selection - class 3
   // ============================================================
@@ -121,6 +120,8 @@ $(document).ready(function() {
     }
   );
 
+
+
   // ============================================================
   // Choose class functions
   // ============================================================
@@ -150,6 +151,8 @@ $(document).ready(function() {
     hideClassesImgCont();
     showC3WImgCont();     
   }); 
+
+
 
   // ============================================================
   // Show/hide images functions
@@ -202,6 +205,8 @@ $(document).ready(function() {
   function hideC3W3Img() {
     $( "#c-3-w-3-img" ).hide();
   }     
+
+
 
   // ============================================================
   // Class 1 - for countdown
@@ -317,6 +322,8 @@ $(document).ready(function() {
     // hideC3W3Img();     
   });    
 
+
+
   // ============================================================
   // Misc functions to shorten things 
   // ============================================================
@@ -370,14 +377,6 @@ $(document).ready(function() {
       document.getElementById("countdown-text").innerHTML = count;
       }  
   }
-
-
-  $( "#play-again-yes" ).click(function() {
-    location.reload();  
-  }); 
-  $( "#play-again-yes-2" ).click(function() {
-    location.reload();  
-  }); 
 
   // ============================================================
   // Attack sequence function
@@ -487,6 +486,15 @@ $(document).ready(function() {
   //end of userAttack(); 
 
 
+  // ============================================================
+  // Play again function
+  // ============================================================
+  $( "#play-again-yes" ).click(function() {
+    location.reload();  
+  }); 
+  $( "#play-again-yes-2" ).click(function() {
+    location.reload();  
+  }); 
 
 
 

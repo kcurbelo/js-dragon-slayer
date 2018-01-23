@@ -1,3 +1,6 @@
+/* ============================================== */
+/* Tag styles */
+/* ============================================== */
 h1, h2, h3, h4, p, li, a {
 	font-family: 'Press Start 2P', cursive;
 /*    -webkit-font-smoothing: antialiased;
@@ -11,7 +14,6 @@ h1, h2, h3, h4, p, li, a {
               user-select: none; /* Non-prefixed version, currently
                                     supported by Chrome and Opera */    
 }
-
 h1 {
 	text-align: center;
 	margin: 0;
@@ -30,63 +32,88 @@ li {
 li a {
 	cursor: pointer;
 }
-
+/* ============================================== */
+/* Top area */
+/* ============================================== */
+#top-cont{
+  background: url('../img/test-bg-3.jpg') ;
+  
+   -webkit-background-size: cover; 
+   -moz-background-size: cover; 
+   -o-background-size: cover; 
+   background-size: cover;
+   height: 400px;
+}
+#screen-cont {
+  width: 55%;
+  margin: 0 auto;
+  /*border: 1px solid black;*/
+  border-bottom:0;
+}
+#resp-text, #resp-sub-text {
+  margin: 0;
+  text-align: center;
+  padding-top: 40px;
+}
+#char-hp {
+  display: inline-block; 
+  width: 50%;
+  color: #fff;
+}
+#dragon-hp {
+  display: inline-block; 
+  text-align: right; 
+  width: 50%;
+  color: #fff;
+}
 .list-cont {
-	text-align: center;
+  text-align: center;
 }
 
 .list-cont li{
-	margin-bottom: 15px;
+  margin-bottom: 15px;
 }
-
 .cont-title {
   padding-bottom: 10px;
   padding-top: 40px;
 }
-
 #c-3-weapons-cont {
   padding-left: 10px;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;  
 }
-
-#top-cont{
-	background: url('../img/test-bg-3.jpg') ;
-	
-	 -webkit-background-size: cover; 
-	 -moz-background-size: cover; 
-	 -o-background-size: cover; 
-	 background-size: cover;
-	 height: 400px;
+.char-img-inv {
+  border: 2px solid transparent;
+}
+.char-select-bor {
+  border:2px dashed rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box; 
+}
+.imgs-cont-1 {
+  display: inline-block;
+  width:33%;
+}
+.imgs-cont-2 {
+  display: inline-block;
+  width: 44%; 
+  text-align: right;
+}
+.imgs-cont-3 {
+  display: inline-block;
+  width: 23%;
+}
+#atk-img{
+  transition: transform 0.6s ease;
 }
 
-#screen-cont {
-	width: 55%;
-	margin: 0 auto;
-  /*border: 1px solid black;*/
-  border-bottom:0;
-}
 
-#char-hp {
-	display: inline-block; 
-	width: 50%;
-  color: #fff;
-}
 
-#dragon-hp {
-	display: inline-block; 
-	text-align: right; 
-	width: 50%;
-  color: #fff;
-}
-
-#resp-text, #resp-sub-text {
-	margin: 0;
-	text-align: center;
-  padding-top: 40px;
-}
-
+/* ============================================== */
+/* Bottom area */
+/* ============================================== */
 #btm-dialog-cont {
 	height:200px;
 	width: 40%; 
@@ -96,33 +123,11 @@ li a {
   background-size: cover;
 }
 
-.char-img-inv {
-	border: 2px solid transparent;
-}
 
-.char-select-bor {
-	border:2px dashed rgba(0, 0, 0, 0.3);
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;	
-}
 
-.imgs-cont-1 {
-  display: inline-block;
-  width:33%;
-}
-
-.imgs-cont-2 {
-  display: inline-block;
-  width: 44%; 
-  text-align: right;
-}
-
-.imgs-cont-3 {
-  display: inline-block;
-  width: 23%;
-}
-
+/* ============================================== */
+/* Media query area */
+/* ============================================== */
 @media only screen and (max-width: 901px) {
   #screen-cont {
     width: 90%;
@@ -153,12 +158,6 @@ li a {
     background-repeat: no-repeat;
     background-size: cover;
   }   
-}
-
-
-
-#atk-img{
-	transition: transform 0.6s ease;
 }
 
 

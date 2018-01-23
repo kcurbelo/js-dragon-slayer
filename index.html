@@ -1,57 +1,157 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>JS Dragon Slayer</title>
+	<title></title>
 	<script
 	  src="https://code.jquery.com/jquery-3.2.1.min.js"
 	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 	  crossorigin="anonymous"></script>
-	<script type="text/javascript" src="js/lead.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script
+	  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+	  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+	  crossorigin="anonymous"></script>	  
+	<script type="text/javascript" src="js/second.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">	
+	<link rel="stylesheet" type="text/css" href="css/main.css">	
 </head>
-
 <body>
-	<!--  -->
-	<h1>Dragon Slayer</h1>
-	<img id="t-i" src="img/w-3.gif">
-	<div id="p-2-fight" style="display: none;">
-		<h1>Time to fight the dragon!</h1>
-		<h3>Select and attack</h3>
-	</div>
 
-	<div id="choose-class-cont">
-		<h1 id="choose-class-title">Choose a class:</h1>
-		<div class="classes-links-cont" style=" margin: 0;">
-			<p class="cur" id="class-1">Class one.</p>
-			<p class="cur" id="class-2">Class two.</p>
-			<p class="cur" id="class-3">Class three.</p>
+<div style=";height: 900px;background: url(img/bg-test-4.jpg);">
+	<!-- Top area -->
+	<div id="top-cont">
+		<div id="screen-cont">
+			<div style="height:270px;">
+				<!-- Response container -->
+				<div style="padding: 10px;">
+					<p id="resp-text"></p>
+				</div>
+			</div>
+			<!-- Images containers -->
+			<div style="height:130px;">
+				<div class="imgs-cont-1">
+					<div id="classes-img-cont">
+						<img class="char-img-inv" id="c-1-img" src="img/assassin-base.gif">
+						<img class="char-img-inv" id="c-2-img" src="img/soldier-base.gif">
+						<img class="char-img-inv" id="c-3-img" src="img/mage-base-2.gif">
+					</div>
+					<!-- c-1 weapons -->
+					<div id="c-1-weapons-cont" style="display: none;">					
+						<img class="char-img-inv" id="c-1-w-1-img" src="img/assassin-w-1.gif">
+						<img class="char-img-inv" id="c-1-w-2-img" src="img/assassin-w-2.gif">
+						<img class="char-img-inv" id="c-1-w-3-img" src="img/assassin-w-3.gif">
+					</div>
+					<!-- c-2 weapons -->
+					<div id="c-2-weapons-cont" style="display: none;">					
+						<img class="char-img-inv" id="c-2-w-1-img" src="img/soldier-w-1.gif">
+						<img class="char-img-inv" id="c-2-w-2-img" src="img/soldier-w-2.gif">
+						<img class="char-img-inv" id="c-2-w-3-img" src="img/soldier-w-3.gif">
+					</div>
+					<!-- c-3 weapons -->
+					<div id="c-3-weapons-cont" style="display: none;">					
+						<img class="char-img-inv" id="c-3-w-1-img" src="img/mage-w-1.gif">
+						<img class="char-img-inv" id="c-3-w-2-img" src="img/mage-w-2.gif">
+						<img class="char-img-inv" id="c-3-w-3-img" src="img/mage-w-3.gif">
+					</div>
+				</div><!--
+			 --><div class="imgs-cont-2">
+					<img id="atk-img" src="img/atk-base.gif" style="display: none;">
+				</div><!--	
+			 --><div class="imgs-cont-3">
+					<img id="dragon-img" src="img/dragon-base-2.gif">
+				</div>	
+				<div>
+					<ul style="padding: 10px;">
+						<li id="char-hp">100/100</li><!--
+					 --><li id="dragon-hp">200/200</li>
+					</ul>
+				</div>											
+			</div>
 		</div>
-	</div>
-	<!-- Character select images -->
-	<div id="char-classes-cont">
-		<img id="class-one-img" src="img/base-1.gif" class="char-select">
-		<img id="class-two-img"  src="img/base-2.gif" class="char-select" >
-		<img id="class-three-img"  src="img/base-3.gif" class="char-select" >
-	</div>
+	</div>	
+	<!-- Bottom Area -->
+	<div style="background-color: transparent;height:200px;">
+		<!-- Bottom Dialog Box -->
+		<div id="btm-dialog-cont" >
 
-	<!-- Class one: Weapon -->
-	<div id="class-1-weapons-cont" style="display: none; margin: 0;">
-		<div id="c-1-w-text-cont">
-			<h1 style=" margin: 0;">Choose class one weapon:</h1>
-			<p id="c1-w-1-link" class="cur">Weapon one.</p>
-			<p id="c1-w-2-link" class="cur">Weapon two.</p>
-			<p id="c1-w-3-link" class="cur">Weapon three.</p>
+			<!-- Choice 1 - choose class =================================== -->
+			<div id="choice-1-cont">
+				<h1 class="cont-title">Choose a class:</h1>
+				<ul class="list-cont">
+					<li><a id="c-1-link">Assassin</a></li>
+					<li><a id="c-2-link">Soldier</a></li>
+					<li><a id="c-3-link">Mage</a></li>
+				</ul>
+			</div>
+
+			<!-- Choice 2 =================================== -->
+			<!-- Choose a c-1 weapon ============= -->
+			<div id="c-1-w-cont" style="display: none;">
+				<h1 class="cont-title">Choose a weapon:</h1>
+				<ul class="list-cont">
+					<li><a id="c-1-w-1">Wooden Spike</a></li>
+					<li><a id="c-1-w-2">Dagger</a></li>
+					<li><a id="c-1-w-3">Short Sword</a></li>
+				</ul>
+			</div>
+			<!--  choose a c-2 weapon ============= -->
+			<div id="c-2-w-cont" style="display: none;">
+				<h1 class="cont-title">Choose a weapon:</h1>
+				<ul class="list-cont">
+					<li><a id="c-2-w-1">Short Sword</a></li>
+					<li><a id="c-2-w-2">Long Sword</a></li>
+					<li><a id="c-2-w-3">Spear</a></li>
+				</ul>
+			</div>	
+			<!--  choose a c-3 weapon ============= -->
+			<div id="c-3-w-cont" style="display: none;">
+				<h1 class="cont-title">Choose a weapon:</h1>
+				<ul class="list-cont">
+					<li><a id="c-3-w-1">Staff of 'meh'</a></li>
+					<li><a id="c-3-w-2">Staff of Earth</a></li>
+					<li><a id="c-3-w-3">Staff of Strength</a></li>
+				</ul>
+			</div>						
+
+			<!-- Countdown timer ===================================  -->
+			<div id="battle-countdown-cont" style="display: none;">
+				<h1 class="cont-title">Battling in: <br><span id="countdown-text"></span></h1>
+			</div>
+
+			<!-- Choice 3 - choose an action ===================================  -->
+			<div id="select-action-cont" style="display: none;">
+				<h1 class="cont-title">Choose your attack:</h1>
+				<!-- class 1 attacks -->
+				<ul id="c-1-atks-cont"  class="list-cont" style="display: none;">
+					<li><a class="light-atk">Swift Strike</a></li>
+					<li><a class="medium-atk">Shadow Attack</a></li>
+					<li><a class="heavy-atk">Assassin Fury</a></li>
+				</ul>
+				<!-- class 2 attacks -->	
+				<ul id="c-2-atks-cont"  class="list-cont" style="display: none;">
+					<li><a class="light-atk">Prod Strike</a></li>
+					<li><a class="medium-atk">Blade Slice</a></li>
+					<li><a class="heavy-atk">Double Handed Lunge</a></li>
+				</ul>	
+				<!-- class 3 attacks -->
+				<ul id="c-3-atks-cont"  class="list-cont" style="display: none;">
+					<li><a class="light-atk">Dust Blow</a></li>
+					<li><a class="medium-atk">Thunder Strike</a></li>
+					<li><a class="heavy-atk">Magical Wrath</a></li>
+				</ul>									
+			</div>	
+
+			<!-- When it is done ===================================  -->
+			<div id="done-cont" style="display: none;">
+				<h1 id="winner-title" class="cont-title">Play again? </h1>
+				<ul class="list-cont">
+					<li id="play-again-yes"><a>Yes</a></li>
+					<li id="play-again-yes-2"><a>YEEEEES</a></li>
+				</ul>	
+			</div>	
 		</div>
-		<div style="position: relative;">
-			<img id="c1-w-1-img" src="img/w-1.gif" class="char-select">
-			<img id="c1-w-2-img"  src="img/w-2.gif" class="char-select">
-			<img id="c1-w-3-img"  src="img/w-3.gif" class="char-select">	
-		</div>		
-	</div>
-
-
-	
-
+	</div>		
+</div>
 
 </body>
 </html>
